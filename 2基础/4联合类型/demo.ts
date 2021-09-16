@@ -10,6 +10,6 @@ myFavoriteNumber4 = 7;
 
 
 //访问联合类型的属性或方法
-function getLength(something: string | number): string {
+function getLengthFun(something: string | number): string {
     return something.toString();
 }

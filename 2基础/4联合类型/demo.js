@@ -4,8 +4,8 @@
 var myFavoriteNumber4;
 myFavoriteNumber4 = 'seven';
 myFavoriteNumber4 = 7;
-myFavoriteNumber4 = true;
+// myFavoriteNumber4 = true;
 //访问联合类型的属性或方法
-function getLength(something) {
+function getLengthFun(something) {
     return something.toString();
 }
