@@ -15,3 +15,7 @@
 // declare global 扩展全局变量
 // declare module 扩展模块
 // /// <reference /> 三斜线指令
+
+declare var jQuery: (selector: string) => any;
+
+jQuery('#foo');

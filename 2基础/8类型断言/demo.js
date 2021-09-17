@@ -1,13 +1,9 @@
 //类型断言可以用来手动指定一个值的类型
-//语法
-//<类型>值
-//值as类型
-//将一个联合类型的变量指定为一个更加具体的类型
-function getLength(something) {
-    if (something.length) {
-        return something.length;
+function isFish(animal) {
+    if (typeof animal.swim === 'function') {
+        return true;
     }
-    else {
-        return something.toString().length;
-    }
+    return false;
 }
+//使用类型断言时一定要格外小心，尽量避免断言后调用方法或引用深层属性，以减少不必要的运行时错误。
+window.foo = 1;

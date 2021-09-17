@@ -4,13 +4,23 @@
 //<类型>值
 //值as类型
 
-//将一个联合类型的变量指定为一个更加具体的类型
-function getLength(something: string | number): number {
-    if ((<string>something).length) {
-        return (<string>something).length;
-    } else {
-        return something.toString().length;
-    }
+interface Cat {
+    name: string;
+    run(): void;
+}
+interface Fish {
+    name: string;
+    swim(): void;
 }
 
-getLength(1);
+function isFish(animal: Cat | Fish) {
+    if (typeof (animal as Fish).swim === 'function') {
+        return true;
+    }
+    return false;
+}
+
+//使用类型断言时一定要格外小心，尽量避免断言后调用方法或引用深层属性，以减少不必要的运行时错误。
+
+(window as any).foo = 1;
+
